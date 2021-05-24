@@ -1,3 +1,6 @@
+<?php session_start(); 
+ 
+?>
 <html>
 <head>
 <title>Brisa</title>
@@ -15,7 +18,7 @@
   
 </div>
 <div class="content">
-  <h2>CSS Template</h2>
+  <h2>Bem vindo</h2>
     <div id="login-button">
         <a href="login.php">Login</a>
     </div>

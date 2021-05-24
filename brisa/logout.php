@@ -1,4 +1,5 @@
 <?php 
-    session_destroy();
+    session_start();
+    $_SESSION['Active'] = false;
     header('location:index.php');
 ?>

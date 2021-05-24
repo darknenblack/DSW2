@@ -31,20 +31,25 @@
     </div>
     <div class="cards">
         <!-- A card with given width -->
-        <div class="cards__item">
-        Brisa
+        <div class="cards__item" > 
+          <img src="img/pousada-santa-rita.jpg" alt="" class = "hotel" >
+          <a href=""> <p>pousada Santa Rita</p></a>
         </div>
-        <div class="cards__item">
-        Brisa
+        <div class="cards__item" id = "hotel2" >
+          <img src="img/78530860.jpg" alt="" class = "hotel" >
+          <a href=""> <p>pousada Santa Rita</p></a>
         </div>
-        <div class="cards__item">
-        Brisa
+        <div class="cards__item" id = "hotel3" >
+          <img src="img/images.jpg" alt="" class = "hotel" >
+          <a href=""> <p>pousada Santa Rita</p></a>
         </div>
-        <div class="cards__item">
-        Brisa
+        <div class="cards__item" id = "hotel4" >
+          <img src="img/pousada-caicara.jpg" alt="" class = "hotel" >
+          <a href=""> <p>pousada Santa Rita</p></a>
         </div>
-        <div class="cards__item">
-        Brisa
+        <div class="cards__item" id = "hotel5" >
+          <img src="img/WEB-PousadaVivamar-166-e1567982987303.jpg" alt="" class = "hotel" >
+          <a href=""> <p>pousada Santa Rita</p></a>
         </div>
 
     </div>

@@ -1,3 +1,6 @@
+<?php session_start(); 
+
+?>
 <html>
 <head>
 <title>Brisa</title>
@@ -30,6 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $login = ($_POST["login"]);
           $password = ($_POST["password"]);
           $loginErr = $passwordErr = "";
+          $_SESSION['Username'] = $login;
+          $_SESSION['Active'] = true;
 
           header('location: home.php');
         }
@@ -37,10 +42,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $passwordErr = "Senha incorreta";
         }
         break;
-        default:
+       
+        
+      case "hotel":
+        if ($password == "hotel"){
+          $login = ($_POST["login"]);
+          $password = ($_POST["password"]);
+          $loginErr = $passwordErr = "";
+          $_SESSION['Username'] = $login;
+          $_SESSION['Active'] = true;
+
+          header('location: home.php');
+        }
+        else{
+          $passwordErr = "Senha incorreta";
+        }
+        break;
+       
+
+      case "site":
+        if ($password == "site"){
+          $login = ($_POST["login"]);
+          $password = ($_POST["password"]);
+          $loginErr = $passwordErr = "";
+        
+          $_SESSION['Username'] = $login;
+          $_SESSION['Active'] = true;
+
+          header('location: home.php');
+        }
+        else{
+          $passwordErr = "Senha incorreta";
+        }
+        break;
+
+      default:
         $loginErr = "Usuario não encontrado";
         break;
-        
       }
   if (empty($_POST["password"]))
     $passwordErr = "Senha não informada";
@@ -52,8 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <div class="header">
-  <h1>Title</h1>
-  <p>A slogan here. Perhaps change all to an image?</p>
+<img src="img/logo.png" height=220 style="margin-top:-60px;">
 </div>
 <div class="content">
   <h2>Login</h2>
@@ -80,6 +117,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </table>
       </form>
 </div>
-
+<?php include("footer.php"); ?>
 </body>
 </html>

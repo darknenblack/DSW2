@@ -56,5 +56,6 @@
   <p>A full-height, fixed sidenav and content.</p>
 </div>
 
+<?php include("footer.php"); ?>
 </body>
 </html>

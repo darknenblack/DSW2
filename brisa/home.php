@@ -1,4 +1,9 @@
-	<html>
+<?php session_start(); 
+  if ($_SESSION['Active'] == false){
+    header('location: login.php');
+  }
+?>
+<html>
 <head>
 <title>Brisa</title>
     <link rel="stylesheet" href="style.css">
@@ -15,5 +20,6 @@
   <p>A full-height, fixed sidenav and content.</p>
 </div>
 
+<?php include("footer.php"); ?>
 </body>
 </html>

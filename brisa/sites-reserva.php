@@ -1,3 +1,7 @@
+<?php session_start(); 
+  if ($_SESSION['Active']==false):
+    header('location: login.php')
+?>
 <html>
 <head>
 <title>Brisa</title>
@@ -53,6 +57,6 @@ include ("menu.php");
   </table>
   <p>A full-height, fixed sidenav and content.</p>
 </div>
-
+<?php include("footer.php"); ?>
 </body>
 </html>

@@ -1,3 +1,7 @@
+<?php session_start(); 
+  if ($_SESSION['Active']==false):
+    header('location: login.php')
+?>
 <html>
 <head>
 <title>Brisa</title>
@@ -7,6 +11,7 @@
 <div class="header">
     <img src="img/logo.png" height=220 style="margin-top:-60px;">
 </div>
+
 
 <?php
 include ("menu.php");

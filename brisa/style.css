@@ -90,7 +90,6 @@ body {
 }
 
 .cards__item {
-    /* There will be 4 cards per row */
     flex-basis: 25%;
 
     padding-left: 8px;
@@ -98,9 +97,10 @@ body {
     margin: 20px;
     padding: 10px;
     border-radius: 8px;
-    height: 300px;
-    border: 3px red;
-    width: 220px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    box-shadow: 1px 2px #cfcfcf;
 }
 /*End of cards*/
 
@@ -114,7 +114,7 @@ body {
   right: 120px;
   text-align: center;
   padding-top: 10px;
-  border-radius:8px;
+  border-radius: 8px;
 }
 
 #login-button a {
@@ -196,17 +196,25 @@ body {
 /* index images*/
 
 .hotel{
-  width: 100%;
   border-radius: 20%;
   width: 400px;
   height: 250px;
 }
 
 
-#hotel1:hover{
-  
+
+.tab-2itens{
+  width: 400px;
 }
 
-
+.tab2{
+  float: left;
+  width: 160px;
+  margin: 20px;
+  margin-top: 0px;
+  background-color: rgb(224, 224, 183);
+  border-radius: 20%;
+  text-align: center;
+}
 /* end of index images*/
 

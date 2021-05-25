@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Brisa</title>
+<title>DiFerias</title>
     <link rel="stylesheet" href="style.css">
     
     <script type="text/javascript">

@@ -229,9 +229,11 @@ body {
 
 	/* Footer */
   .footer{
-    background-color: #efef62;
-    align-items: center;
-    width: 100%;
-  }
+  background-color: #efef62;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 /* end of index images*/
 

@@ -5,7 +5,7 @@
 ?>
 <html>
 <head>
-<title>Brisa</title>
+<title>DiFerias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,11 +40,16 @@
     <td><input type="password" name="senha"></td>
   </tr>
   <tr>
-    <td><input type="submit" value="Criar"></td>
+    <td><input type="submit" value="Criar" onclick="Sucesso()></td>
   </tr>
   </form>
   </table>
 </div>
 <?php include("footer.php"); ?>
+<script>
+  function Sucesso() {
+  alert("Site de reservas cadastrado com sucesso!");
+}
+</script>
 </body>
 </html>

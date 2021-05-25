@@ -132,11 +132,11 @@ body {
 /*End of login button*/
 
 /* Filter parameteres */
-
+/*
 #filter{
   
 }
-
+*/
 .filter_item {
   margin-left:30px;
 }
@@ -216,11 +216,22 @@ body {
   border-radius: 20%;
   text-align: center;
 }
+
+.data{
+  width: fit-content;
+  padding: 10px;
+  font-size:large;
+  
+  background-color: rgb(224, 224, 183);
+  border-radius: 50%;
+  text-align: center;
+}
+
+	/* Footer */
+  .footer{
+    background-color: #efef62;
+    align-items: center;
+    width: 100%;
+  }
 /* end of index images*/
 
-/* Footer */
-.footer{
-  background-color: #efef62;
-  align-items: center;
-  width: 100%;
-}

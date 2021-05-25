@@ -38,7 +38,7 @@
     <td><textarea name="descricao" rows="4" cols="50"> </textarea></td>
   </tr>
   <tr>
-    <td><input type="submit" value="Criar" onclick="Sucesso()></td>
+    <td><input type="submit" value="Criar" onclick="Sucesso()"></td>
   </tr>
   </form>
   </table>
@@ -46,7 +46,7 @@
 <?php include("footer.php"); ?>
 <script>
 function Sucesso() {
-  alert("Promoção cadastrada com sucesso!");
+  alert('Promoção cadastrada com sucesso!');
 }
 </script>
 </body>

@@ -38,7 +38,7 @@
     <td><input type="password" name="senha"></td>
   </tr>
   <tr>
-    <td><input type="submit" value="Criar" onclick="Sucesso()></td>
+    <td><input type="submit" value="Criar" onclick="Sucesso()"></td>
   </tr>
   </form>
   </table>
@@ -46,7 +46,7 @@
 <?php include("footer.php"); ?>
 <script>
 function Sucesso() {
-  alert("Hotel cadastrado com sucesso!");
+  alert('Hotel cadastrado com sucesso!');
 }
 </script>
 </body>

@@ -31,9 +31,7 @@
         </form>
     </div>
     <div class="cards">
-        <!-- A card with given width -->
         <?php
-
         $imgs = array(
           0=>"img/pousada-santa-rita.jpg",
           1=>"img/78530860.jpg",

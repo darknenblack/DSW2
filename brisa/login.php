@@ -81,11 +81,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         break;
       }
   if (empty($_POST["password"]))
-    $passwordErr = "Senha não informada";
-  
-  
+    $passwordErr = "Senha não informada"; 
 }
-
 ?>
 
 

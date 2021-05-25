@@ -13,10 +13,5 @@
 
 <?php include("menu.php"); ?>
 
-<div class="content">
-  
-</div>
-
-<?php include("footer.php"); ?>
 </body>
 </html>

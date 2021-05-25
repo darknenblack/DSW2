@@ -42,9 +42,9 @@ body {
 }
 
 /* Style the side navigation */
-.sidenav {
+.menu {
   height: 100%;
-  margin-top:150px;
+  margin-top:158px;
   width: 200px;
   position: fixed;
   z-index: 1;
@@ -55,7 +55,7 @@ body {
 }
 
 /* Side navigation links */
-.sidenav a {
+.menu a {
   color: white;
   padding: 16px;
   text-decoration: none;
@@ -63,8 +63,8 @@ body {
 }
 
 /* Change color on hover */
-.sidenav a:hover {
-  background-color: #fdb503;
+.menu a:hover {
+  background-color: #f0bf44;
   color: black;
 }
 
@@ -104,28 +104,6 @@ body {
   background-color:#f0c49b;
 }
 /*End of cards*/
-
-/*Login button (for index)*/
-#login-button {
-  width: 120px;
-  height:40px;
-  position:absolute;
-  top: 150px;
-  background-color: #C5860F;
-  right: 120px;
-  text-align: center;
-  padding-top: 10px;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-#login-button a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-/*End of login button*/
-
 
 .filter_item {
   margin-left:30px;
@@ -209,6 +187,43 @@ body {
   border-radius: 8px;
   align-self: center;
 }
-
 /* end of index images*/
 
+/* Buttons */
+#login-button {
+  width: 120px;
+  height:40px;
+  position:absolute;
+  top: 150px;
+  background-color: #C5860F;
+  right: 120px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#login-button a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+#admin-button {
+  width: 120px;
+  height:55px;
+  position:absolute;
+  top: 150px;
+  background-color: #C5860F;
+  right: 120px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#admin-button a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}

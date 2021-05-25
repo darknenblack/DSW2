@@ -13,8 +13,12 @@
 <?php include ("menu.php"); ?>
 
 <div class="content">
-  <h2>Hotéis</h2>
-<p><a href="novo-sitereserva.php">Novo</a></p>
+  <h2>Sites de Reservas</h2>
+  <?php if ($_SESSION['Username'] == "admin"): ?>
+    <div id="admin-button">
+        <a href="novo-sitereserva.php">Cadastrar Site de Reservas</a>
+  </div>
+  <?php endif ?>
 <table class="gv">
   <thead>
     <tr>
@@ -75,7 +79,6 @@
     </tr>
     </tbody>
   </table>
-  <p>A full-height, fixed sidenav and content.</p>
 </div>
 <?php include("footer.php"); ?>
 </body>

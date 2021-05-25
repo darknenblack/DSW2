@@ -14,7 +14,9 @@
 
 <div class="content">
   <h2>Hotéis</h2>
-<p><a href="novo-hotel.php">Novo</a></p>
+  <div id="login-button">
+        <a href="novo-hotel.php">Cadastrar Hotel</a>
+  </div>
 <table class="gv">
   <thead>
     <tr>
@@ -68,7 +70,6 @@
     </tr>
     </tbody>
   </table>
-  <p>A full-height, fixed sidenav and content.</p>
 </div>
 
 </body>

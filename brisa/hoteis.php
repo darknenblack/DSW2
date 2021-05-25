@@ -9,14 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">
-    <img src="img/logo.png" height=220 style="margin-top:-60px;">
-</div>
-
-
-<?php
-include ("menu.php");
-?>
+<?php include("header.php"); ?>
+<?php include ("menu.php");?>
 
 <div class="content">
   <h2>Hotéis</h2>

@@ -89,9 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<div class="header">
-<img src="img/logo.png" height=220 style="margin-top:-60px;">
-</div>
+<?php include("header.php"); ?>
+
 <div class="content">
   <h2>Login</h2>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class= "login_geral">

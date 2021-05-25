@@ -11,10 +11,9 @@
     </script>
 </head>
 <body onload="ready()">
-<div class="header">
-  <img src="img/logo.png" height=220 style="margin-top:-60px;">
-  
-</div>
+
+<?php include("header.php"); ?>
+
 <div class="content">
   <h2>Bem vindo</h2>
     <div id="login-button">

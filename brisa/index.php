@@ -3,12 +3,7 @@
 <title>DiFerias</title>
     <link rel="stylesheet" href="style.css">
     
-    <script type="text/javascript">
-    function ready() {
-        document.getElementById('inicio').value = new Date().toISOString().split('T')[0];
-        document.getElementById('fim').value = new Date().toISOString().split('T')[0];
-    }
-    </script>
+    
 </head>
 <body onload="ready()">
 
@@ -35,7 +30,7 @@
         $imgs = array(
           0=>"img/pousada-santa-rita.jpg",
           1=>"img/78530860.jpg",
-          2=>"img/images.jpg",
+          2=>"img/Pousada-Maresias.jpg",
           3=>"img/pousada-caicara.jpg",
           4=>"img/WEB-PousadaVivamar-166-e1567982987303.jpg",
         );

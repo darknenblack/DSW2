@@ -91,7 +91,7 @@ body {
 }
 
 .cards__item {
-  flex-basis: 25%;
+  /*flex-basis: 25%;*/
   padding-left: 8px;
   padding-right: 8px;
   margin: 20px;

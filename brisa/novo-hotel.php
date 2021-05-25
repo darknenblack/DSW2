@@ -48,7 +48,7 @@
 <?php include("footer.php"); ?>
 <script>
 function Sucesso() {
-  alert("Site de reservas cadastrado com sucesso!");
+  alert("Hotel cadastrado com sucesso!");
 }
 </script>
 </body>

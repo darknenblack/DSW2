@@ -14,8 +14,7 @@
 <?php include("menu.php"); ?>
 
 <div class="content">
-  <h2>CSS Template</h2>
-  <p>A full-height, fixed sidenav and content.</p>
+  
 </div>
 
 <?php include("footer.php"); ?>

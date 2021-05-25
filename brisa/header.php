@@ -1,3 +1,3 @@
 <div class="header">
-    <img src="img/logo.png" height=220 style="margin-top:-60px;">
+    <img src="img/logotipo.png" height=200 style="margin-top:-60px;">
 </div>

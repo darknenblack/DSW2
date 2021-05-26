@@ -42,8 +42,8 @@
           4=>"Pousada Vivamar",
         );
         $sites = array(
-          0=>"http://www.hotelpousadasantarita.com.br/",
-          1=>"https://www.shangrila.com.br/",
+          0=>"https://www.hurb.com/br/hotels/ribeirao-preto/pousada-santa-rita-JNP-JP626275?cmp=396312&prm=515&gclid=Cj0KCQjwwLKFBhDPARIsAPzPi-KhbV1YgtLvjiCJYKuYArYerkEQEPSG9-6WP-5KGDlpNu31r6P2YgwaAtaaEALw_wcB/",
+          1=>"https://www.hoteis.com/ho546739/hotel-pousada-shangri-la-serra-negra-brasil/?q-rooms=1&q-room-0-adults=2&q-room-0-children=0",
           2=>"https://www.maresiasbeiramar.com.br/",
           3=>"http://www.caicarapousada.com.br/",
           4=>"https://pousadavivamar.com.br/",
@@ -95,35 +95,51 @@
           $fim_filtro =  date_create($_POST["fim"]);
           else
             $fim_filtro = '';
-
-        for($i=0; $i<5; $i++){
-          if (($localizacoes[$i] == $cidade_filtro || $cidade_filtro == '') && (($inicio_filtro >= $datas_inicio[$i] && $inicio_filtro <= $datas_final[$i] && $fim_filtro >= $datas_inicio[$i] && $fim_filtro <= $datas_final[$i]) || ($inicio_filtro == '' && $fim_filtro == '')))
-          {
-
-            echo'<div class="cards__item" id = "hotel3" > <img src="';
-            echo  $imgs[$i];
-            echo'" alt="" class = "hotel" >';
-            echo'<a href="';
-            echo $sites[$i];
-            echo'"> <p>';
-            echo $sites[$i];
-            echo'</p></a> <p class="data">';
-            echo date_format($datas_inicio[$i], "d/m/Y");
-            echo' a ';
-            echo date_format($datas_final[$i], "d/m/Y");
-            echo '</p><br>
-            <div class="tab-2itens">
-              <div class="tab2">
+        
+            
+            for($i=0; $i<5; $i++){
+              if (($localizacoes[$i] == $cidade_filtro || $cidade_filtro == '') && (($inicio_filtro >= $datas_inicio[$i] && $inicio_filtro <= $datas_final[$i] && $fim_filtro >= $datas_inicio[$i] && $fim_filtro <= $datas_final[$i]) || ($inicio_filtro == '' && $fim_filtro == '')))
+              {
+                
+                echo'<div class="cards__item" id = "hotel3" > <img src="';
+                echo  $imgs[$i];
+                echo'" alt="" class = "hotel" >';
+                echo'<a href="';
+                echo $sites[$i];
+                echo'"> <p>';
+                echo $pousadas[$i];
+                echo'</p></a> <p class="data">';
+                echo date_format($datas_inicio[$i], "d/m/Y");
+                echo' a ';
+                echo date_format($datas_final[$i], "d/m/Y");
+                echo '</p><br>
+                <div class="tab-2itens">
+                <div class="tab2">
                 <p>Diaria a vista </p> <p>R$ 209,90 </p>
-              </div>
-              <div class="tab2">
+                </div>
+                <div class="tab2">
                 <p>Diaria parcelada </p> <p>R$ 229,90 </p>
+                </div>
+                </div>
+                </div>';
+              }
+            }
+            
+            /* apenas para a apresentacao
+            <div class="cards__item" id = "hotel4" >
+              <img src="img/pousada-caicara.jpg" alt="" class = "hotel" >
+              <a href="http://www.caicarapousada.com.br/"> <p>Pousada Caicara</p></a>
+              <p>27/05/2021 a 05/07/2021</p><br>
+              <div class="tab-2itens">
+                <div class="tab2">
+                  <p>Diaria a vista </p> <p>R$ 209,90 </p>
+                </div>
+                <div class="tab2">
+                  <p>Diaria parcelada </p> <p>R$ 229,90 </p>
+                </div>
               </div>
             </div>
-            </div>';
-          }
-        }
-        
+            */
         ?>
 
     </div>

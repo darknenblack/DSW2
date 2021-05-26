@@ -2,15 +2,6 @@
   box-sizing: border-box;
 }
 
-/* Style the header */
-.header {
-  background-color: #f3d5b2;
-  padding: 20px;
-  text-align: center;
-  height: 150px;
-  position: static;
-}
-
 /* Style the content */
 .content {
   margin-left: 200px;
@@ -109,37 +100,7 @@
 /* end of index inside box*/
 /* end of index */
 
-/* Footer */
-.footer{
-  background-color: #f3d5b2;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
-  width: 100%;
-  position:fixed;
-}
-
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  float:right;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #eee2cc;
-}
-
-/* Style the side navigation */
+/* Menun */
 .menu {
   height: 100%;
   margin-top:158px;
@@ -166,52 +127,6 @@ body {
   color: black;
 }
 
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (min-width: 768px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
-}
-
-/* Flex cards*/
-/*End of cards*/
-.card_home {
-  /*flex-basis: 25%;*/
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-left: 250px;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  height: fit-content;
-  width: fit-content;
-  padding: 10px;
-  box-shadow: 1px 2px #cfcfcf;
-  background-color:#f0c49b;
-}
-
-
-/* Gridview? */
-.gv-header {
-/* Background color */
-  background-color: #fdb503;
-  /* Stick to the top */
-  position: sticky;
-  top: 0;
-  /* Displayed on top of other rows when scrolling */
-  z-index: 9999;
-}
-
-.gv-col{
-  padding-right:30px;
-}
-
-.gv tr:nth-child(even) {
-  background-color: #efef62;
-}
-/*End of gridview*/
-
 /* login boxes*/
 .login_geral {
   width: fit-content;
@@ -229,12 +144,9 @@ body {
   font-size: 12;
   text-align: center;
 }
-
 /*end of login boxes*/
 
-
-/* Buttons */
-
+/* Admin button */
 #admin-button {
   width: 120px;
   height:55px;
@@ -252,4 +164,59 @@ body {
   color: white;
   text-decoration: none;
   display: block;
+}
+
+/* Header */
+.header {
+  background-color: #f3d5b2;
+  padding: 20px;
+  text-align: center;
+  height: 150px;
+  position: static;
+}
+
+/* Footer */
+.footer{
+  background-color: #f3d5b2;
+  bottom: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  position:fixed;
+}
+
+.card_home {
+  /*flex-basis: 25%;*/
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 250px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 1px 2px #cfcfcf;
+  background-color:#f0c49b;
+}
+
+/* Gridview */
+.gv-header {
+  background-color: #fdb503;
+  position: sticky;
+  top: 0;
+}
+
+.gv-col{
+  padding-right:30px;
+}
+
+.gv tr:nth-child(even) {
+  background-color: #efef62;
+}
+/*End of gridview*/
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee2cc;
 }

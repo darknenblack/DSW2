@@ -3,7 +3,7 @@
 ?>
 <html>
 <head>
-<title>Brisa</title>
+<title>DiFerias</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
     function ready() {
@@ -81,17 +81,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         break;
       }
   if (empty($_POST["password"]))
-    $passwordErr = "Senha não informada";
-  
-  
+    $passwordErr = "Senha não informada"; 
 }
-
 ?>
 
 
-<div class="header">
-<img src="img/logo.png" height=220 style="margin-top:-60px;">
-</div>
+<?php include("header.php"); ?>
+
 <div class="content">
   <h2>Login</h2>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class= "login_geral">

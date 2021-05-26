@@ -5,22 +5,18 @@
 ?>
 <html>
 <head>
-<title>Brisa</title>
+<title>DiFerias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">
-    <img src="img/logo.png" height=220 style="margin-top:-60px;">
-</div>
-
-
-<?php
-include ("menu.php");
-?>
+<?php include("header.php"); ?>
+<?php include ("menu.php");?>
 
 <div class="content">
   <h2>Hotéis</h2>
-<p><a href="novo-hotel.php">Novo</a></p>
+  <div id="login-button">
+        <a href="novo-hotel.php">Cadastrar Hotel</a>
+  </div>
 <table class="gv">
   <thead>
     <tr>
@@ -43,26 +39,37 @@ include ("menu.php");
     </thead>
     <tbody>
     <tr>
-      <td class="gv-col">Hotel Embrazado</td>
+      <td class="gv-col">Pousada Santa Rita</td>
       <td class="gv-col">13.365.608/0001-61</td>
-      <td class="gv-col">Rio de Janeiro</td>
-      <td class="gv-col">contato@hotelembrazado.com</td>
+      <td class="gv-col">Ribeirao Preto</td>
+      <td class="gv-col">santarita@gmail.trips</td>
     </tr>
     <tr>
-      <td class="gv-col">Hotel Embrazado</td>
+      <td class="gv-col">Pousada Shangrila</td>
       <td class="gv-col">13.365.608/0001-61</td>
-      <td class="gv-col">Rio de Janeiro</td>
-      <td class="gv-col">contato@hotelembrazado.com</td>
+      <td class="gv-col">Serra Negra</td>
+      <td class="gv-col">Shangrila@gmail.com</td>
     </tr>
     <tr>
-      <td class="gv-col">Hotel Embrazado</td>
+      <td class="gv-col">Maresias Beira Mar</td>
       <td class="gv-col">13.365.608/0001-61</td>
-      <td class="gv-col">Rio de Janeiro</td>
-      <td class="gv-col">contato@hotelembrazado.com</td>
+      <td class="gv-col">Maresias</td>
+      <td class="gv-col">beiraMaar@gmail.com.br</td>
+    </tr>
+    <tr>
+      <td class="gv-col">Pousada Caiçara</td>
+      <td class="gv-col">13.365.608/0001-61</td>
+      <td class="gv-col">Ilha Grande</td>
+      <td class="gv-col">Caicara@bol.org</td>
+    </tr>
+    <tr>
+      <td class="gv-col">Pousada VivaMar</td>
+      <td class="gv-col">13.365.608/0001-61</td>
+      <td class="gv-col">Ubatuba</td>
+      <td class="gv-col">VivaMar@gmail.org</td>
     </tr>
     </tbody>
   </table>
-  <p>A full-height, fixed sidenav and content.</p>
 </div>
 
 </body>

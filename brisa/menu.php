@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <div class="sidenav">
   <a href="home.php">Home</a>
   <?php if ($_SESSION['Username'] == "admin"): ?>

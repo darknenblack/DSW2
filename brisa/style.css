@@ -104,6 +104,20 @@ body {
   background-color:#f0c49b;
 }
 /*End of cards*/
+.card_home {
+  /*flex-basis: 25%;*/
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 250px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 1px 2px #cfcfcf;
+  background-color:#f0c49b;
+}
 
 .filter_item {
   margin-left:30px;

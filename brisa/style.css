@@ -11,6 +11,104 @@
   position: static;
 }
 
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+/*Index page*/
+
+/*buttons*/
+#login-button {
+  width: 120px;
+  height:40px;
+  position:absolute;
+  top: 150px;
+  background-color: #C5860F;
+  right: 120px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#login-button a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+/*end buttons*/
+
+
+
+.filter_item {
+  margin-left:30px;
+}
+
+.filter_date
+{
+  height: 25px;
+}
+/* End of filter parameters*/
+
+/*index boxes*/
+
+.cards {
+    display: flex;
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.cards__item {
+  /*flex-basis: 25%;*/
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 1px 2px #cfcfcf;
+  background-color:#f0c49b;
+}
+/*end of index boxes*/
+
+/* index inside box */
+.hotel{
+  border-radius: 20%;
+  width: 400px;
+  height: 250px;
+}
+
+.tab-2itens{
+  width: 400px;
+}
+
+.tab2{
+  float: left;
+  width: 160px;
+  margin: 20px;
+  margin-top: 0px;
+  background-color: rgb(224, 224, 183);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.data{
+  width: fit-content;
+  padding: 10px;
+  font-size:large;
+  background-color: rgb(224, 224, 183);
+  text-align: center;
+  border-radius: 8px;
+  align-self: center;
+}
+/* end of index inside box*/
+/* end of index */
+
 /* Footer */
 .footer{
   background-color: #f3d5b2;
@@ -68,11 +166,6 @@ body {
   color: black;
 }
 
-/* Style the content */
-.content {
-  margin-left: 200px;
-  padding-left: 20px;
-}
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (min-width: 768px) {
@@ -82,27 +175,6 @@ body {
 }
 
 /* Flex cards*/
-.cards {
-    display: flex;
-    /* Put a card in the next row when previous cards take all width */
-    flex-wrap: wrap;
-    margin-left: -8px;
-    margin-right: -8px;
-}
-
-.cards__item {
-  /*flex-basis: 25%;*/
-  padding-left: 8px;
-  padding-right: 8px;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  height: fit-content;
-  width: fit-content;
-  padding: 10px;
-  box-shadow: 1px 2px #cfcfcf;
-  background-color:#f0c49b;
-}
 /*End of cards*/
 .card_home {
   /*flex-basis: 25%;*/
@@ -118,16 +190,6 @@ body {
   box-shadow: 1px 2px #cfcfcf;
   background-color:#f0c49b;
 }
-
-.filter_item {
-  margin-left:30px;
-}
-
-.filter_date
-{
-  height: 25px;
-}
-/* End of filter parameters*/
 
 
 /* Gridview? */
@@ -170,58 +232,8 @@ body {
 
 /*end of login boxes*/
 
-/* index images*/
-.hotel{
-  border-radius: 20%;
-  width: 400px;
-  height: 250px;
-}
-
-
-.tab-2itens{
-  width: 400px;
-}
-
-.tab2{
-  float: left;
-  width: 160px;
-  margin: 20px;
-  margin-top: 0px;
-  background-color: rgb(224, 224, 183);
-  border-radius: 8px;
-  text-align: center;
-}
-
-.data{
-  width: fit-content;
-  padding: 10px;
-  font-size:large;
-  background-color: rgb(224, 224, 183);
-  text-align: center;
-  border-radius: 8px;
-  align-self: center;
-}
-/* end of index images*/
 
 /* Buttons */
-#login-button {
-  width: 120px;
-  height:40px;
-  position:absolute;
-  top: 150px;
-  background-color: #C5860F;
-  right: 120px;
-  text-align: center;
-  padding-top: 10px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-#login-button a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
 
 #admin-button {
   width: 120px;

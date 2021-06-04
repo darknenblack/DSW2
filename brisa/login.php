@@ -93,14 +93,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class= "login_geral">
       <table>
       <tr>
-        <th><label class="login-lbl">Login: </label></th>
+        <th><label>Login: </label></th>
         <th><input type="text" name="login"></th>
       </tr>
       <tr>
         <th><span class="error"> <?php echo $loginErr;?></span></th>
       </tr>
       <tr>
-        <th><label class="login-lbl">Senha: </label></th>
+        <th><label>Senha: </label></th>
         <th><input type="password" name="password"></th>
       </tr>
       <tr>

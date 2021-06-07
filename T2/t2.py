@@ -14,7 +14,7 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
-@app.route('/')
+@app.route('/',methods=["GET","POST"])
 def index():
   
     return render_template('index.html')

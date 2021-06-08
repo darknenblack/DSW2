@@ -3,7 +3,11 @@
 {% block content %}
 
   <div class="container">
-    <a href="{{ url_for ('login')}}" class="btn login-button" id="login-button">Login</a>
+    {% if not 'loged' in session %}
+      <a href="{{ url_for ('login')}}" class="btn login-button" id="login-button">Login</a>
+    {% else  %}
+      <a href="{{ url_for ('home')}}" class="btn login-button" id="login-button">Área do usuário</a>
+    {% endif %}
   </div>
   <section class="py-5 text-center container">
     <br><br>

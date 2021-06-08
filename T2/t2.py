@@ -3,7 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = "TRABWEB2"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////C:\\Users\\Fer_s\\AppData\\Local\\Temp\\Test.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 db.create_all()
@@ -60,20 +61,25 @@ def index():
 def login():
     success = ""
     session['role']= ""
-    if request.method == "POST":
+    if not 'loged' in session:
+        if request.method == "POST":
             if(request.form['login'] == 'admin' and request.form['password'] == 'admin'):
-                session['loged'] = "true"
+                session['loged'] = True
                 session['role'] = "admin"
                 success="Logado com sucesso - " + session['role']
+                return redirect(url_for('home'))    
             elif(request.form['login'] == 'hotel' and request.form['password'] == 'hotel'):
-                session['loged'] = "true"
+                session['loged'] = True
                 session['role'] = "hotel"
                 success="Logado com sucesso -" + session['role']
+                return redirect(url_for('home'))
             elif(request.form['login'] == 'site' and request.form['password'] == 'site'):
-                session['loged'] = "true"
+                session['loged'] = True
                 session['role'] = "site"
                 success="Logado com sucesso -" + session['role']
-                
+                return redirect(url_for('home'))
+    else:
+        return redirect(url_for('home'))
     return render_template('login.html',success = success, role=session['role'])   
 
 @app.route('/home',methods=["GET","POST"])

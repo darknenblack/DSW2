@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="{{ url_for('static', filename= 'Cartoes.js') }}" defer></script>
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        <img src="{{url_for('static', filename='img/logo.png')}}" aling height="200" style="margin-top:-60px;">
+    </div>
+    
+    {% block content %} {% endblock %}
+    
+    <div class="footer">
+        <img src="{{ url_for('static', filename= 'img/logotipo.png') }}" height=90 style="margin-top:-45px;">
+    </div>
+</body>
+</html>

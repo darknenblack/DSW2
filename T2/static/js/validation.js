@@ -1,20 +1,23 @@
 function verifyLogin(){
-  var user = document.getElementsByName("login").value;
-  var pass = document.getElementsByName("password").value;
-  console.log("oi")
-  if (user == ""){
-    alert("Preencha o Login")
-    user.focus()
-    return false
+  var userEl = document.getElementById("login");
+  var passEl = document.getElementById("password");
+  var user = document.getElementById("login").value;
+  var pass = document.getElementById("password").value;
+  console.log(user);
+  console.log(pass);
+  if (user === ""){
+    alert("Preencha o Login");
+    userEl.focus();
+    return false;
   }
-  else if(pass == ""){
-    alert("Preencha sua senha")
-    pass.focus()
-    return false
+  else if(pass === ""){
+    alert("Preencha sua senha");
+    passEl.focus();
+    return false;
 
   }
   
-  return true
+  return true;
   
 
  

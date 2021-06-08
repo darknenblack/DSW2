@@ -51,6 +51,8 @@ class Promocao(db.Model):
     descricao = db.Column(db.String(400), unique=True, nullable=False)
     avista = db.Column(db.String(10),unique=False,nullable=False)
     parcelado = db.Column(db.String(10),unique=False,nullable=False)
+    url_img = db.Column(db.String(300),unique=False,nullable=False)
+    website = db.Column(db.String(80), unique=False, nullable=False)
 
     def __repr__(self):
         return '<Promocao %r>' % self.nome
@@ -63,7 +65,7 @@ def index():
     
 @app.route('/login',methods=["GET","POST"])
 def login():
-    success = ""
+    success = False
     session['role']= ""
     if not 'loged' in session:
         if request.method == "POST":
@@ -82,9 +84,13 @@ def login():
                 session['role'] = "site"
                 success="Logado com sucesso -" + session['role']
                 return redirect(url_for('home'))
+           
+
+                
+        
     else:
         return redirect(url_for('home'))
-    return render_template('login.html',success = success, role=session['role'])   
+    return render_template('login.html', role=session['role'])   
 
 @app.route('/home',methods=["GET","POST"])
 def home():
@@ -158,7 +164,9 @@ def novapromocao():
         descricao = request.form['descricao']
         avista = request.form['avista']
         parcelado = request.form['parcelado']
-        promocao = Promocao(nome=nome,cidade=cidade,inicio=inicio,fim=fim,descricao=descricao,avista=avista,parcelado=parcelado)
+        url_img = request.form['url_img']
+        website = request.form['website']
+        promocao = Promocao(nome=nome,cidade=cidade,inicio=inicio,fim=fim,descricao=descricao,avista=avista,parcelado=parcelado,url_img = url_img, website=website)
         db.session.add(promocao)
         db.session.commit()
         success = "Cadastrado com sucesso"

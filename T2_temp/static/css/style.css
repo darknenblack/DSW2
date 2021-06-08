@@ -15,6 +15,7 @@
   right: 120px;
   text-align: center;
   margin-top: 25px;
+  background-color:#84e45d;
 }
 
 #login-button a {
@@ -127,9 +128,9 @@
   height: fit-content;
   margin: 10px;
   position:relative;
-  background-color: burlywood;
+  background-color: #84e45d;
   border-radius: 20px;
-  border: 2px solid burlywood;
+  border: 2px solid #84e45d;
 }
 
 .error{
@@ -145,7 +146,7 @@
   height:55px;
   position:absolute;
   top: 150px;
-  background-color: #C5860F;
+  background-color: #84e45d;
   right: 120px;
   text-align: center;
   padding-top: 10px;
@@ -161,16 +162,25 @@
 
 /* Header */
 .header {
-  background-color: #f3d5b2;
-  padding: 20px;
   text-align: center;
   height: 150px;
   position: static;
 }
 
+.navbar-header {
+  float: left;
+  padding: 3px; /*opcional*/
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-brand {
+  position: static;
+  float: none;
+}
+
 /* Footer */
 .footer{
-  background-color: #f3d5b2;
   bottom: 0px;
   margin-bottom: 0px;
   width: 100%;
@@ -189,7 +199,6 @@
   width: fit-content;
   padding: 10px;
   box-shadow: 1px 2px #cfcfcf;
-  background-color:#f0c49b;
 }
 
 /* Gridview */

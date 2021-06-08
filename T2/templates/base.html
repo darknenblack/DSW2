@@ -16,12 +16,12 @@
     
     <div class="menu">
       <a href="{{url_for('home')}}">Home</a>
-      {% if role == "admin"%}
+      {% if session['role'] == "admin"%}
         <a href="{{url_for('hoteis')}}">Hotéis</a>
-        <a href="sites-reserva.php">Sites de Reserva</a>
+        <a href="{{url_for('sites')}}">Sites de Reserva</a>
       {%endif%}
-      {% if role == "hotel" or role == "site"%}
-        <a href="nova-promocao.php">Cadastrar promoção</a>
+      {% if session['role'] == "hotel" or session['role'] == "site"%}
+        <a href="{{url_for('novapromocao')}}">Cadastrar promoção</a>
         {%endif%}  
 
       <a href="{{url_for('logout')}}">Sair</a>

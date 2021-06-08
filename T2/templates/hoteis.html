@@ -9,7 +9,7 @@
     <div id="login-button">
           <a href="{{url_for('novohotel')}}">Cadastrar Hotel</a>
     </div>
-    {%for hotel in hoteis%}
+    
     <table class="gv">
       <thead>
         <tr>
@@ -27,39 +27,17 @@
         </tr>
       </thead>
       <tbody>
+        {%for hotel in hoteis%}
         <tr>
           <td class="gv-col">{{hotel.nome}}</td>
-          <td class="gv-col">13.365.608/0001-61</td>
-          <td class="gv-col">Ribeirao Preto</td>
-          <td class="gv-col">santarita@gmail.trips</td>
+          <td class="gv-col">{{hotel.cnpj}}</td>
+          <td class="gv-col">{{hotel.cidade}}</td>
+          <td class="gv-col">{{hotel.email}}</td>
         </tr>
-        <tr>
-          <td class="gv-col">Pousada Shangrila</td>
-          <td class="gv-col">13.365.608/0001-61</td>
-          <td class="gv-col">Serra Negra</td>
-          <td class="gv-col">Shangrila@gmail.com</td>
-        </tr>
-        <tr>
-          <td class="gv-col">Maresias Beira Mar</td>
-          <td class="gv-col">13.365.608/0001-61</td>
-          <td class="gv-col">Maresias</td>
-          <td class="gv-col">beiraMaar@gmail.com.br</td>
-        </tr>
-        <tr>
-          <td class="gv-col">Pousada Caiçara</td>
-          <td class="gv-col">13.365.608/0001-61</td>
-          <td class="gv-col">Ilha Grande</td>
-          <td class="gv-col">Caicara@bol.org</td>
-        </tr>
-        <tr>
-          <td class="gv-col">Pousada VivaMar</td>
-          <td class="gv-col">13.365.608/0001-61</td>
-          <td class="gv-col">Ubatuba</td>
-          <td class="gv-col">VivaMar@gmail.org</td>
-        </tr>
+        {%endfor%}
       </tbody>
     </table>
-    {%endfor%}
+    
   </div>
 
 

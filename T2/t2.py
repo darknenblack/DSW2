@@ -5,6 +5,7 @@ app = Flask(__name__)
 app.secret_key = "TRABWEB2"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
+db.create_all()
 
 
 class User(db.Model):
@@ -24,7 +25,29 @@ class Hotel(db.Model):
     senha = db.Column(db.String(120), unique=True, nullable=False)
 
     def __repr__(self):
-        return '<User %r>' % self.username        
+        return '<Nome %r>' % self.nome   
+
+class Site(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    website = db.Column(db.String(80), unique=True, nullable=False)
+    nome = db.Column(db.String(120), unique=True, nullable=False)
+    cidade = db.Column(db.String(120), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    senha = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<Nome %r>' % self.nome     
+
+class Promocao(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(120), unique=True, nullable=False)
+    cidade = db.Column(db.String(120), unique=True, nullable=False)
+    inicio = db.Column(db.String(120), unique=True, nullable=False)
+    fim = db.Column(db.String(120), unique=True, nullable=False)
+    descricao = db.Column(db.String(400), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<Promocao %r>' % self.nome
 
 @app.route('/',methods=["GET","POST"])
 def index():
@@ -63,7 +86,7 @@ def home():
 def hoteis():
     if not 'loged' in session:
         return redirect(url_for('login'))
-        hoteis = Hotel.query.all()
+    hoteis = Hotel.query.all()
   
     return render_template('hoteis.html',hoteis=hoteis) 
 
@@ -84,6 +107,50 @@ def novohotel():
         success = "Cadastrado com sucesso"
   
     return render_template('novo-hotel.html',success=success) 
+
+@app.route('/sites',methods=["GET","POST"])
+def sites():
+    if not 'loged' in session:
+        return redirect(url_for('login'))
+    #hoteis = Hotel.query.all()
+  
+    return render_template('sites-reserva.html') 
+
+@app.route('/novosite',methods=["GET","POST"])
+def novosite():
+    success = ""
+    if not 'loged' in session:
+        return redirect(url_for('login'))
+    if request.method == "POST":
+        website = request.form['website'] 
+        nome = request.form['nome']
+        cidade = request.form['cidade']
+        email = request.form['email']
+        senha = request.form['senha']
+        site= Site(website=website,nome=nome,cidade=cidade,email=email,senha=senha)
+        db.session.add(site)
+        db.session.commit()
+        success = "Cadastrado com sucesso"
+  
+    return render_template('novo-sitereserva.html',success=success) 
+
+@app.route('/novapromocao',methods=["GET","POST"])
+def novapromocao():
+    success = ""
+    if not 'loged' in session:
+        return redirect(url_for('login'))
+    if request.method == "POST":
+        nome = request.form['nome']
+        cidade = request.form['cidade']
+        inicio = request.form['inicio']
+        fim = request.form['fim']
+        descricao = request.form['descricao']
+        promocao = Promocao(nome=nome,cidade=cidade,inicio=inicio,fim=fim,descricao=descricao)
+        db.session.add(promocao)
+        db.session.commit()
+        success = "Cadastrado com sucesso"
+  
+    return render_template('nova-promocao.html',success=success) 
 
 @app.route('/logout',methods=["GET","POST"])
 def logout():

@@ -11,16 +11,10 @@
 
 /*buttons*/
 #login-button {
-  width: 120px;
-  height:40px;
   position:absolute;
-  top: 150px;
-  background-color: #C5860F;
   right: 120px;
   text-align: center;
-  padding-top: 10px;
-  border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 #login-button a {
@@ -44,15 +38,15 @@
 
 /*index boxes*/
 
-.cards {
+/*.cards {
     display: flex;
-    /* Put a card in the next row when previous cards take all width */
+    /* Put a card in the next row when previous cards take all width
     flex-wrap: wrap;
     margin-left: -8px;
     margin-right: -8px;
-}
+}*/
 
-.cards__item {
+/* .cards__item {
   padding-left: 8px;
   padding-right: 8px;
   margin: 20px;
@@ -63,7 +57,7 @@
   padding: 10px;
   box-shadow: 1px 2px #cfcfcf;
   background-color:#f0c49b;
-}
+} */
 /*end of index boxes*/
 
 /* index inside box */

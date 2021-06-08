@@ -29,22 +29,13 @@
       <!-- Repeat other header column ... -->
       </tr>
     </thead>
+    {%for site in sites%}
     <tr>
-      <td class="gv-col">Booking</td>
-      <td class="gv-col">https://booking.com</td>
-      <td class="gv-col">mrbooking@booking.com</td>
+      <td class="gv-col">{{site.nome}}</td>
+      <td class="gv-col">{{site.website}}</td>
+      <td class="gv-col">{{site.email}}</td>
     </tr>
-    <tr>
-      <td class="gv-col">Airbnb</td>
-      <td class="gv-col">https://airbnb.com</td>
-      <td class="gv-col">mrbnb@airbnb.com</td>
-    </tr>
-    <tr>
-      <td class="gv-col">BestTrips</td>
-      <td class="gv-col">https://best.trips</td>
-      <td class="gv-col">admin@best.trips</td>
-    </tr>
-  
+  {%endfor%}
     </tbody>
   </table>
 </div>

@@ -112,9 +112,9 @@ def novohotel():
 def sites():
     if not 'loged' in session:
         return redirect(url_for('login'))
-    #hoteis = Hotel.query.all()
+    sites = Site.query.all()
   
-    return render_template('sites-reserva.html') 
+    return render_template('sites-reserva.html',sites=sites) 
 
 @app.route('/novosite',methods=["GET","POST"])
 def novosite():

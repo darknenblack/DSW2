@@ -1,14 +1,14 @@
 
 {% extends 'base.html' %}
 
-{% block content %}   
-<h1>{% block title %} DiFerias {% endblock %}</h1>
+{% block content %}  
 
   <div class="content">
     <h2>Hotéis</h2>
-    <div id="login-button">
-          <a href="{{url_for('novohotel')}}">Cadastrar Hotel</a>
-    </div>
+    <button id="admin-button">
+      <a href="{{url_for('novohotel')}}">Cadastrar Hotel</a>
+    </button>
+
     
     <table class="gv">
       <thead>

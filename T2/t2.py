@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = "TRABWEB2"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////C:\\Users\\Fer_s\\AppData\\Local\\Temp\\Test.db'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////C:\\Users\\Fer_s\\AppData\\Local\\Temp\\Test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 db.create_all()
@@ -36,6 +36,8 @@ class Site(db.Model):
     cidade = db.Column(db.String(120), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     senha = db.Column(db.String(120), unique=True, nullable=False)
+    
+
 
     def __repr__(self):
         return '<Nome %r>' % self.nome     
@@ -47,6 +49,8 @@ class Promocao(db.Model):
     inicio = db.Column(db.String(120), unique=True, nullable=False)
     fim = db.Column(db.String(120), unique=True, nullable=False)
     descricao = db.Column(db.String(400), unique=True, nullable=False)
+    avista = db.Column(db.String(10),unique=False,nullable=False)
+    parcelado = db.Column(db.String(10),unique=False,nullable=False)
 
     def __repr__(self):
         return '<Promocao %r>' % self.nome
@@ -152,7 +156,9 @@ def novapromocao():
         inicio = request.form['inicio']
         fim = request.form['fim']
         descricao = request.form['descricao']
-        promocao = Promocao(nome=nome,cidade=cidade,inicio=inicio,fim=fim,descricao=descricao)
+        avista = request.form['avista']
+        parcelado = request.form['parcelado']
+        promocao = Promocao(nome=nome,cidade=cidade,inicio=inicio,fim=fim,descricao=descricao,avista=avista,parcelado=parcelado)
         db.session.add(promocao)
         db.session.commit()
         success = "Cadastrado com sucesso"

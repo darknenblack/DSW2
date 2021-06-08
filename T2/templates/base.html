@@ -11,18 +11,20 @@
     <div class="header">
         <img src="{{url_for('static', filename='img/logo.png')}}" height=200 style="margin-top:-60px;">
     </div>
-    <?php session_start(); ?>
     <div class="sidenav">
       
     
     <div class="menu">
-      <a href="home.php">Home</a>
-        <a href="hoteis.php">Hotéis</a>
+      <a href="{{url_for('home')}}">Home</a>
+      {% if role == "admin"%}
+        <a href="{{url_for('hoteis')}}">Hotéis</a>
         <a href="sites-reserva.php">Sites de Reserva</a>
+      {%endif%}
+      {% if role == "hotel" or role == "site"%}
         <a href="nova-promocao.php">Cadastrar promoção</a>
-        <a href="nova-promocao.php">Cadastrar promoção</a>
+        {%endif%}  
 
-      <a href="logout.php">Sair</a>
+      <a href="{{url_for('logout')}}">Sair</a>
     </div>
     
     

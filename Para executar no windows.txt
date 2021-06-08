@@ -1,3 +1,10 @@
+Para windows:
 set FLASK_APP=T2\t2.py
 set FLASK_ENV=development
 flask run
+
+Para LINUX:
+export FLASK_APP=T2\t2.py
+export FLASK_ENV=development
+flask run
+

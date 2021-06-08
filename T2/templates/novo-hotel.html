@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+    {% block content %}   
+  <h1>{% block title %} DiFerias {% endblock %}</h1>
+
+
+<div class="content">
+  <h2>Cadastrar hotel</h2>
+  <table>
+  <form action="{{url_for('novohotel')}}" method="POST">
+  <tr>
+    <td>CNPJ:</td>
+    <td><input type="text" name="cnpj"></td>
+    <td><span class="error">* <?php echo $cnpjErr;?></span></td>
+  </tr> 
+  <tr>
+    <td>Nome:</td>
+    <td><input type="text" name="nome"></td>
+    <td><span class="error">* <?php echo $nomeErr;?></span></td>
+  </tr>
+  <tr>
+    <td>Cidade:</td>
+    <td><input type="text" name="cidade"></td>
+    <td><span class="error">* <?php echo $cidadeErr;?></span></td>
+  </tr> 
+  <tr>
+    <td>Email:</td>
+    <td><input type="text" name="email"></td>
+    <td><span class="error">* <?php echo $emailErr;?></span></td>
+  </tr>
+  <tr>
+    <td>Senha:</td>
+    <td><input type="password" name="senha"></td>
+    <td><span class="error">* <?php echo $senhaErr;?></span></td>
+  </tr>
+  <tr>
+    <td><input type="submit" value="Criar" ></td>
+  </tr>
+  </form>
+  </table>
+</div>
+{% endblock %}

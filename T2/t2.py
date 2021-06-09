@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = "TRABWEB2"
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////C:\\Users\\Fer_s\\AppData\\Local\\Temp\\Test.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\Fer_s\\Desktop\\flask_app\\T2\\Test.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 db.create_all()
@@ -59,8 +59,8 @@ class Promocao(db.Model):
 
 @app.route('/',methods=["GET","POST"])
 def index():
-  
-    return render_template('index.html')
+    promocao = Promocao.query.all()
+    return render_template('index.html', promocao = promocao)
 
     
 @app.route('/login',methods=["GET","POST"])

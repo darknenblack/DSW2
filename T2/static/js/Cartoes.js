@@ -24,25 +24,19 @@ function myFunction() {
     console.log(filter)
     data1 = new Date (data1.replace("-", ","))
     data2 = new Date (data2.replace("-", ","))
-    console.log(data1)
-    console.log(data2)
     
-    cards = document.getElementsByClassName("cards__item")
-    localizacoes = ["Ribeirão Preto", "Serra Negra", "Maresias", "Ilha Grande", "Ubatuba"]
-    date = document.getElementsByClassName("data")
-    //console.log(cards[0])
+    cards = document.getElementsByClassName("col")
+    localizacoes = document.getElementsByClassName("cidades")
+    date = document.getElementsByClassName("intervalo")
     
-    for (let i = 0; i < 5; i++){
-        if (localizacoes[i].toUpperCase().includes(filter) && ((isNaN(data1) || data1 >= getdate(date[i],0)) && (isNaN(data2) || data2 <= getdate(date[i],1)))){
+    for (let i = 0; i < cards.length; i++){
+      
+        if (localizacoes[i].innerHTML.toUpperCase().includes(filter) && ((isNaN(data1) || (data1 >= getdate(date[i],0) && data1 <= getdate(date[i],1))) && (isNaN(data2) || (data2 >= getdate(date[i],0) && data2 <= getdate(date[i],1))))){
           cards[i].style.display = ""
         }
         else{
           cards[i].style.display = "none"
         }
+        
     }
-
-   
-   console.log(getdate(date[0], 1))
-   
-
   }

@@ -7,19 +7,19 @@
 {% endif%}
 <br><br>
 <div class="content">
-  <h3>Login</h3>
+  <h1>Login</h1>
   <form action="{{ url_for ('login')}}" method="POST" class="login_geral">
     <table>
       <tr>
         <th><label>Login: </label></th>
-        <th><input type="text" name="login" width="100%"></th>
+        <th><input type="text" name="login" id="login" width="100%"></th>
       </tr>
       <tr>
         <th><span class="error"> </span></th>
       </tr>
       <tr>
         <th><label>Senha: </label></th>
-        <th><input type="password" name="password" width="100%"></th>
+        <th><input type="password" name="password" id="password" width="100%"></th>
       </tr>
       <tr>
         <th><span class="error"> </span></th>
@@ -31,7 +31,6 @@
       </tr>
     </table>
   </form>
-  <h5>{{ success }}</h5>
 </div>
 
 

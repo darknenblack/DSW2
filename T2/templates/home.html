@@ -3,9 +3,9 @@
 {% block content %}
 
   <div class="content">
-    <h2>Promoções</h2>
 
   {% if session['role'] == "hotel" or session['role'] == "site"%}
+  <h2 class="table-header">Promoções</h2>
   <table class="gv">
     <thead>
       <tr>
@@ -44,8 +44,12 @@
       {%endif%}
       {% if session['role'] == "admin"%}
       
-      <a href="{{url_for('novohotel')}}">Cadastrar Hotel</a>
-      <a href="{{url_for('novosite')}}">Cadastrar Site de Reservas</a>
+      <button id="admin-button">
+        <a href="{{url_for('novohotel')}}">Cadastrar Hotel</a>
+      </button>
+      <button id="admin-button">
+        <a href="{{url_for('novosite')}}">Cadastrar Site de Reservas</a>
+      </button>
           {%endif%}
           </div>
          

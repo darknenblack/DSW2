@@ -98,19 +98,19 @@
 /* Menun */
 .menu {
   height: 100%;
-  margin-top:158px;
+  margin-top:150px;
   width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #fe7247;
+  background-color: #c9c9c9;
   overflow-x: hidden;
 }
 
 /* Side navigation links */
 .menu a {
-  color: white;
+  color: black;
   padding: 16px;
   text-decoration: none;
   display: block;
@@ -118,8 +118,33 @@
 
 /* Change color on hover */
 .menu a:hover {
-  background-color: #f0bf44;
+  background-color: #84e45d;
   color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top:-50px;
+    
+  }
+  .menu a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .menu a {
+    text-align: center;
+    float: none;
+  }
+
 }
 
 /* login boxes*/
@@ -143,9 +168,7 @@
 
 /* Admin button */
 #admin-button {
-  width: 120px;
-  height:55px;
-  position:absolute;
+  position:sticky;
   top: 150px;
   background-color: #84e45d;
   right: 120px;
@@ -153,6 +176,12 @@
   padding-top: 10px;
   border-radius: 8px;
   margin-top: 20px;
+  padding: 10px 10px;
+  float: right;
+  border: 0px;
+  font-size: 15px;
+  font-weight: bold;
+
 }
 
 #admin-button a {
@@ -163,21 +192,35 @@
 
 /* Header */
 .header {
+  background-color: #212529;
   text-align: center;
   height: 150px;
   position: static;
+  padding: 25px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+  .header-right {
+    float: none;
+  }
+
 }
 
 .navbar-header {
   float: left;
-  padding: 3px; /*opcional*/
-  text-align: center;
   width: 100%;
+  margin: auto;
+  
 }
 
 .navbar-brand {
-  position: static;
   float: none;
+  margin-right: 1rem;
 }
 
 /* Footer */
@@ -186,10 +229,10 @@
   margin-bottom: 0px;
   width: 100%;
   position:fixed;
+  background-color: #212529;
 }
 
 .card_home {
-  /*flex-basis: 25%;*/
   padding-left: 8px;
   padding-right: 8px;
   margin-left: 250px;
@@ -204,7 +247,7 @@
 
 /* Gridview */
 .gv-header {
-  background-color: #fdb503;
+  background-color: #84e45d;
   position: sticky;
   top: 0;
 }
@@ -214,12 +257,13 @@
 }
 
 .gv tr:nth-child(even) {
-  background-color: #efef62;
+  background-color: #d4ebcb;
 }
 /*End of gridview*/
 
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #eee2cc;
+  background-color: #f8f6f1;
+  margin: 0;
 }

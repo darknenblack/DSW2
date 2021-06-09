@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
   <script src="{{ url_for('static', filename= 'js/validation.js') }}" defer></script>
-  <title>{% block title %} {% endblock %}</title>
-</head>
+  <title>{% block title %}DiFerias{% endblock %}</title>
 
-<body>
-  <div class="header navbar navbar-dark bg-dark shadow-sm">
+  <div class="header">
     <div class="navbar-header">
       <a class="navbar-brand" href="{{ url_for ('index')}}">
-        <img src="{{url_for('static', filename='img/logo01.png')}}" style="height:180px;">
+        <img src="{{url_for('static', filename='img/logo01.png')}}" style="height:90px;">
       </a>
     </div>
   </div>
+</head>
+
+<body>
   <div class="sidenav">
 
 

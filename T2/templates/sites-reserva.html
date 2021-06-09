@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}   
-<h1>{% block title %} DiFerias {% endblock %}</h1>
-
 
 <div class="content">
   <h2>Sites de Reservas</h2>
  
-    <div id="admin-button">
-        <a href="{{url_for('novosite')}}">Cadastrar Site de Reservas</a>
-  </div>
+  <button id="admin-button">
+    <a href="{{url_for('novosite')}}">Cadastrar Site de Reservas</a>
+  </button>
 
 <table class="gv">
   <thead>

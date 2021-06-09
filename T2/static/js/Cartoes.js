@@ -19,11 +19,11 @@ function getdate(date, part){
 function myFunction() {
     var input = document.getElementById("cidade");
     const filter = input.value.toUpperCase();
-    var data1 = document.getElementById("data_inicio").value;
+    var data_1 = document.getElementById("data_inicio").value;
     var data2 = document.getElementById("data_final").value;
     console.log(filter)
-    data1 = new Date (data1.replace("-", ","))
-    data2 = new Date (data2.replace("-", ","))
+    data1 = new Date (data_1.replaceAll("-", ","))
+    data2 = new Date (data2.replaceAll("-", ","))
     
     cards = document.getElementsByClassName("col")
     localizacoes = document.getElementsByClassName("cidades")
@@ -39,4 +39,6 @@ function myFunction() {
         }
         
     }
+    console.log(data1)
+    console.log(getdate(date[0],0))
   }

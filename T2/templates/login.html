@@ -1,6 +1,10 @@
 {% extends 'base_login.html' %}
 
 {% block content %}
+
+{% if not success %}
+<script>alert("Usuário ou senha inválidos")</script>
+{% endif%}
 <br><br>
 <div class="content">
   <h3>Login</h3>

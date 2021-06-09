@@ -3,4 +3,54 @@
 {% block content %}   
   <h1>{% block title %} DiFerias {% endblock %}</h1>
 
+  <div class="content">
+    <h2>Promoções</h2>
+
+  {% if session['role'] == "hotel" or session['role'] == "site"%}
+  <table class="gv">
+    <thead>
+      <tr>
+        <th class="gv-header">
+        Nome
+        </th>
+        <th class="gv-header">
+        Cidade
+        </th>
+        <th class="gv-header">
+        Inicio
+        </th>     <th class="gv-header">
+        Fim
+        </th>
+        </th>     <th class="gv-header">
+        Valor a vista
+        </th>
+        </th>     <th class="gv-header">
+        Website
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for promocao in promocoes%}
+      <tr>
+        <td class="gv-col">{{promocao.nome}}</td>
+        <td class="gv-col">{{promocao.cidade}}</td>
+        <td class="gv-col">{{promocao.inicio}}</td>
+        <td class="gv-col">{{promocao.fim}}</td>
+        <td class="gv-col">{{promocao.avista}}</td>
+        <td class="gv-col">{{promocao.website}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+      {%endif%}
+      {% if session['role'] == "admin"%}
+      
+      <a href="{{url_for('novohotel')}}">Cadastrar Hotel</a>
+      <a href="{{url_for('novosite')}}">Cadastrar Site de Reservas</a>
+          {%endif%}
+          </div>
+         
+
+      </div>
+
 {% endblock %}

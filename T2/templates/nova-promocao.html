@@ -9,57 +9,57 @@
   <form action="{{url_for('novapromocao')}}" method="POST">
   <tr>
     <td>Nome:</td>
-    <td><input type="text" name="nome"></td>
+    <td><input type="text" name="nome" class = "keep_form"></td>
     <td><span class="error">* {{error['nome']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{nome}}</p>
   </tr> 
   <tr>
     <td>Cidade:</td>
-    <td><input type="text" name="cidade"></td>
+    <td><input type="text" name="cidade" class = "keep_form"></td>
     <td><span class="error">* {{error['cidade']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{cidade}}</p>
   </tr>
   <tr>
     <td>Preço à vista</td>
-    <td><input type="text" name="avista"></td>
+    <td><input type="text" name="avista" class = "keep_form"></td>
     <td><span class="error">* {{error['avista']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{avista}}</p>
   </tr>
   <tr>
     <td>Preço parcelado</td>
-    <td><input type="text" name="parcelado"></td>
+    <td><input type="text" name="parcelado" class = "keep_form"></td>
     <td><span class="error">* {{error['parcelado']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{parcelado}}</p>
   </tr>
   <tr>
     <td>Início:</td>
-    <td><input type="date" name="inicio"></td>
+    <td><input type="date" name="inicio" class = "keep_form"></td>
     <td><span class="error">* {{error['inicio']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{inicio}}</p>
   </tr> 
   <tr>
     <td>Fim:</td>
-    <td><input type="date" name="fim"></td>
+    <td><input type="date" name="fim" class = "keep_form"></td>
     <td><span class="error">* {{error['fim']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{fim}}</p>
   </tr>
   <tr>
     <td>Website</td>
-    <td><input type="text" name="website"></td>
+    <td><input type="text" name="website" class = "keep_form"></td>
     <td><span class="error">* {{error['website']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{website}}</p>
   </tr>
   <tr>
     <td>Url da imagem</td>
-    <td><input type="text" name="url_img"></td>
+    <td><input type="text" name="url_img" class = "keep_form"></td>
     <td><span class="error">* {{error['url_img']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{url_img}}</p>
   </tr>
   <tr>
     <td>Descrição:</td>
-    <td><textarea name="descricao" rows="4" cols="50"> </textarea></td>
+    <td><textarea name="descricao" rows="4" cols="50" class = "keep_form"> </textarea></td>
     <td><span class="error">* {{error['descricao']}}</span></td>
-    <p hidden class="keep">{{cnpj}}</p>
+    <p hidden class="keep">{{descricao}}</p>
   </tr>
   <tr>
     <td><input type="submit" value="Criar" ></td>

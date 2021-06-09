@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = "TRABWEB2"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\Fer_s\\Desktop\\flask_app\\T2\\Test.db'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\Fer_s\\Desktop\\flask_app\\T2\\Test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 db.create_all()
@@ -167,7 +167,7 @@ def novosite():
             db.session.commit()
             success = "Cadastrado com sucesso"
         else:
-            return render_template('novo-hotel.html',success=success, error=error, website = website, nome = nome, cidade = cidade, email = email, senha = "") 
+            return render_template('novo-sitereserva.html',success=success, error=error, website = website, nome = nome, cidade = cidade, email = email, senha = "") 
   
     return render_template('novo-sitereserva.html',success=success,error=error) 
 
@@ -203,7 +203,7 @@ def novapromocao():
             db.session.commit()
             success = "Cadastrado com sucesso"
         else:
-            return render_template('novo-hotel.html',success=success, error=error, nome = nome, cidade = cidade, inicio = inicio, fim = fim, descricao = descricao, avista = avista, parcelado = parcelado, url_img = url_img, website = website) 
+            return render_template('nova-promocao.html',success=success, error=error, nome = nome, cidade = cidade, inicio = inicio, fim = fim, descricao = descricao, avista = avista, parcelado = parcelado, url_img = url_img, website = website) 
   
     return render_template('nova-promocao.html',success=success,error=error) 
 

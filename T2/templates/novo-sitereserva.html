@@ -9,31 +9,31 @@
   <form action="{{url_for('novosite')}}" method="POST">
   <tr>
     <td>Website:</td>
-    <td><input type="text" name="website"></td>
+    <td><input type="text" name="website" class = "keep_form"></td>
     <td><span class="error">* {{error['website']}}</span></td>
     <p hidden class="keep">{{website}}</p>
   </tr> 
   <tr>
     <td>Nome:</td>
-    <td><input type="text" name="nome"></td>
+    <td><input type="text" name="nome" class = "keep_form"></td>
     <td><span class="error">* {{error['nome']}}</span></td>
     <p hidden class="keep">{{nome}}</p>
   </tr>
   <tr>
     <td>Cidade:</td>
-    <td><input type="text" name="cidade"></td>
+    <td><input type="text" name="cidade" class = "keep_form"></td>
     <td><span class="error">* {{error['cidade']}}</span></td>
     <p hidden class="keep">{{cidade}}</p>
   </tr> 
   <tr>
     <td>Email:</td>
-    <td><input type="text" name="email"></td>
+    <td><input type="text" name="email" class = "keep_form"></td>
     <td><span class="error">* {{error['email']}}</span></td>
     <p hidden class="keep">{{email}}</p>
   </tr>
   <tr>
     <td>Senha:</td>
-    <td><input type="password" name="senha"></td>
+    <td><input type="password" name="senha" class = "keep_form"></td>
     <td><span class="error">* {{error['senha']}}</span></td>
     <p hidden class="keep">{{senha}}</p>
   </tr>

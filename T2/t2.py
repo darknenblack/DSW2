@@ -168,7 +168,7 @@ def novosite():
             success = "Cadastrado com sucesso"
         else:
             return render_template('novo-sitereserva.html',success=success, error=error, website = website, nome = nome, cidade = cidade, email = email, senha = "") 
-  
+
     return render_template('novo-sitereserva.html',success=success,error=error) 
 
 @app.route('/novapromocao',methods=["GET","POST"])
@@ -204,7 +204,7 @@ def novapromocao():
             success = "Cadastrado com sucesso"
         else:
             return render_template('nova-promocao.html',success=success, error=error, nome = nome, cidade = cidade, inicio = inicio, fim = fim, descricao = descricao, avista = avista, parcelado = parcelado, url_img = url_img, website = website) 
-  
+
     return render_template('nova-promocao.html',success=success,error=error) 
 
 @app.route('/logout',methods=["GET","POST"])

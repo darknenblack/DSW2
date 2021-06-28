@@ -1,7 +1,7 @@
 import '../css/bootstrap.min.css';
 import '../css/style.css';
 import React, { Component } from "react";
-import { HashRouter, NavLink } from 'react-router-dom';
+import { HashRouter, NavLink, Redirect } from 'react-router-dom';
 
 
 // Para pegar a string digitada o react pega a cada alteração, por isso em onChange tem essa função que atualiza o state
@@ -9,12 +9,14 @@ import { HashRouter, NavLink } from 'react-router-dom';
 
 class Login extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       login: '',
-      senha: ''
+      senha: '',
+      error:'',
+  
     }
 
     // Esse bind parace que não permite que o this seja igual, nao entendi tb kkkk
@@ -42,6 +44,13 @@ class Login extends Component {
   checkForm() {
     if (this.state.login === "admin" && this.state.senha === "admin") {
       console.log("ACEITO")
+      this.props.history.push('/home')    
+
+    }
+    else{
+      this.setState({
+        error:"Login ou senha incorretos"
+      })
     }
   }
 
@@ -55,6 +64,7 @@ class Login extends Component {
             <tr>
               <th><label>Login: </label></th>
               <th><input type="text" value={this.state.login} onChange={this.changeLogin} name="login" id="login" width="100%" /></th>
+              
             </tr>
             <tr>
               <th><span className="error"> </span></th>
@@ -62,6 +72,7 @@ class Login extends Component {
             <tr>
               <th><label>Senha: </label></th>
               <th><input type="password" value={this.state.senha} onChange={this.changeSenha} name="password" id="password" width="100%" /></th>
+              
             </tr>
             <tr>
               <th><span className="error"> </span></th>
@@ -74,7 +85,9 @@ class Login extends Component {
               </th>
             </tr>
           </table>
+          <h6 className="error">{this.state.error}</h6>
         </div>
+       
       </div>
 
     )

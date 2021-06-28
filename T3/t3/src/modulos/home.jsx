@@ -1,6 +1,11 @@
 import '../css/bootstrap.min.css';
 import '../css/style.css';
 import React, { Component } from "react";
+import {
+    Route,
+    NavLink,
+    HashRouter
+  } from "react-router-dom";
 
 
 // Contém o menu lateral que deve ser mostrado após o login
@@ -11,13 +16,10 @@ class Home extends Component{
 
 
     <div className="menu">
-      <a href="{{url_for('home')}}">Home</a>
-      <a href="{{url_for('hoteis')}}">Hotéis</a>
-      <a href="{{url_for('sites')}}">Sites de Reserva</a>
-      <a href="{{url_for('novapromocao')}}">Cadastrar promoção</a>
-    
-
-      <a href="{{url_for('logout')}}">Sair</a>
+      <a ><NavLink to="/home">Hoteis</NavLink></a>
+      <a ><NavLink to="/home">Sites</NavLink></a>
+      <a ><NavLink to="/home">Promocões</NavLink></a>
+      <a><NavLink to="/">Sair</NavLink></a>
     </div>
     </div>
 

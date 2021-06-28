@@ -1,9 +1,15 @@
 from flask import Flask, render_template,request,session,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
+import json
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.secret_key = "TRABWEB2"
+#Windows
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\Fer_s\\Desktop\\flask_app\\T2\\Test.db'
+#Linux
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/Test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -85,7 +91,21 @@ def login():
                success = False       
     else:
         return redirect(url_for('home'))
-    return render_template('login.html', success=success, role=session['role'])   
+    return render_template('login.html', success=success, role=session['role'])
+
+class Teste():
+    def __init__(self,nome,idade):
+        self.nome = nome
+        self.idade = idade
+
+@app.route('/teste')
+@cross_origin()
+def teste():
+    t1 = Teste("Isaac",10)
+    t2 = Teste("Ana",11)
+    l = [t1.__dict__,t2.__dict__]
+    return json.dumps(l)
+
 
 @app.route('/home',methods=["GET","POST"])
 def home():
